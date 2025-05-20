@@ -33,9 +33,9 @@ UserSchema.pre('save', async function() {
 UserSchema.methods.createJWT = function () {
   return jwt.sign(
     { userId: this._id, name: this.name },
-    JWT_SECRET,
+    'nOx0cm9z4zkgqhqJO765TAQ1bsBVaPlaeadMXivmN38EyYzXnX1A0R1Sd746irh',
     {
-      expiresIn: JWT_LIFETIME,
+      expiresIn: '30d',
     }
   )
 }
